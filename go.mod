@@ -1,4 +1,4 @@
-module orbit
+module github.com/poison291/orbit
 
 go 1.25.4
 
