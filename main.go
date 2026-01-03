@@ -19,9 +19,11 @@ func main() {
 		log.Fatal(err)
 	}
 
-	sess.Identify.Intents = discordgo.IntentsGuildMessages | discordgo.IntentsMessageContent
+	sess.Identify.Intents = discordgo.IntentsGuildMessages | discordgo.IntentsMessageContent | discordgo.IntentsGuildMembers
 
 	sess.AddHandler(handlers.MessageHandler)
+	sess.AddHandler(handlers.Welcome)
+	// sess.AddHandler(handlers.GoodBye)
 
 	// Bot connection => with discord
 	err = sess.Open()
