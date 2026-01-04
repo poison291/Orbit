@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"github.com/poison291/orbit/handlers"
 	"github.com/bwmarrin/discordgo"
 	"github.com/joho/godotenv"
+	"github.com/poison291/orbit/handlers"
 )
 
 func main() {
@@ -23,15 +23,19 @@ func main() {
 
 	sess.AddHandler(handlers.MessageHandler)
 	sess.AddHandler(handlers.Welcome)
-	// sess.AddHandler(handlers.GoodBye)
+	sess.AddHandler(handlers.InteractionHandler)     
 
 	// Bot connection => with discord
 	err = sess.Open()
 	if err != nil {
 		log.Fatal(err)
 	}
-
+	handlers.RegisterCommands(sess, "1421139951231438948") // my server
+	handlers.RegisterCommands(sess, "1002933481246052412") // rexxor server
+	
 	defer sess.Close()
 	fmt.Println("The Orbit is online!")
 	select {}
+	
+	
 }
