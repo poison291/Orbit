@@ -1,4 +1,4 @@
-# 🚧🚧🚧 UNDER DEVELOPMENT 🚧🚧🚧
+# UNDER DEVELOPMENT 
 
 # Orbit Discord Bot
 
