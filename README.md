@@ -1,4 +1,4 @@
-# UNDER DEVELOPMENT 
+# Project closed Incomplete
 
 # Orbit Discord Bot
 
